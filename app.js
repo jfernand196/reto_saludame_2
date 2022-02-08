@@ -3,7 +3,9 @@ const app = express();
 
 app.get('/makers/:name', (req, res) =>{
     const names = req.params.name
-    res.send(`<h1>Hola ${names}!</h1>`)
+    let result = names[0].toUpperCase() + names.slice(1);
+
+    res.send(`<h1>Hola ${result}!</h1>`)
 })
 
 
